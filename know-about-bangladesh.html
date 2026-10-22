@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Know About Bangladesh</title>
+<style>
+:root{--bg:#f7f4ec;--surf:#fff;--ink:#17261f;--mute:#5b6b62;--g:#006a4e;--r:#f42a41;--line:#e2ddd0;--soft:#e8f3ee;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1a15;--surf:#17261f;--ink:#eef3ef;--mute:#9fb3a8;--g:#3ec28f;--r:#ff6b7b;--line:#2a3d33;--soft:#1d3228}}
+:root[data-theme="dark"]{--bg:#0f1a15;--surf:#17261f;--ink:#eef3ef;--mute:#9fb3a8;--g:#3ec28f;--r:#ff6b7b;--line:#2a3d33;--soft:#1d3228}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Georgia,'Times New Roman',serif}
+h1,h2,h3,nav,button,.tag{font-family:system-ui,-apple-system,'Segoe UI',sans-serif}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:4px;overflow-x:auto;padding:10px 12px}
+nav a{color:var(--ink);text-decoration:none;font-size:14px;padding:6px 12px;border-radius:99px;white-space:nowrap}
+nav a:hover{background:var(--soft)}
+.hero{background:#006a4e;color:#fff;padding:56px 20px 64px;text-align:center;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-60px;bottom:-60px;width:200px;height:200px;border-radius:50%;background:var(--r);opacity:.9}
+.hero>*{position:relative;z-index:1}
+.hero h1{font-size:clamp(34px,8vw,60px);margin:0 0 8px;line-height:1.1}
+.hero p{max-width:560px;margin:0 auto 22px;font-size:18px;opacity:.95}
+.btn{display:inline-block;background:#fff;color:#006a4e;padding:11px 22px;border-radius:99px;font:600 15px system-ui,sans-serif;text-decoration:none}
+section{max-width:900px;margin:0 auto;padding:44px 18px 8px}
+h2{font-size:28px;margin:0 0 6px;color:var(--g)}
+.sub{color:var(--mute);margin:0 0 20px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.fact{background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:12px}
+.fact b{display:block;font:600 12px system-ui;color:var(--mute);text-transform:uppercase;letter-spacing:.05em}
+.tl{border-left:3px solid var(--g);margin-left:6px;padding-left:18px}
+.tl div{margin-bottom:18px;position:relative}
+.tl div:before{content:"";position:absolute;left:-26px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--r)}
+.tl b{font-family:system-ui;color:var(--g)}
+.map{display:grid;gap:16px}
+@media(min-width:700px){.map{grid-template-columns:300px 1fr;align-items:start}}
+svg{width:100%;max-width:300px;margin:auto;display:block;background:var(--soft);border-radius:16px}
+.land{fill:var(--surf);stroke:var(--g);stroke-width:2}
+.dot{fill:var(--r);cursor:pointer;stroke:#fff;stroke-width:2}
+.dot.on{fill:var(--g);r:9}
+.info{background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:16px;min-height:140px}
+.info h3{margin:0 0 4px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.chips button{border:1px solid var(--line);background:var(--surf);color:var(--ink);padding:7px 14px;border-radius:99px;font-size:14px;cursor:pointer}
+.chips button.on{background:var(--g);color:var(--bg);border-color:var(--g)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:16px}
+.card h3{margin:0 0 4px;font-size:18px}
+.card p{margin:6px 0 0;font-size:15px}
+.tag{font-size:12px;background:var(--soft);color:var(--g);padding:2px 9px;border-radius:99px;font-weight:600}
+.alert{background:var(--surf);border:2px solid var(--r);border-radius:14px;padding:14px 16px;margin-bottom:14px}
+.alert b{color:var(--r);font-family:system-ui}
+details{background:var(--surf);border:1px solid var(--line);border-radius:12px;margin-bottom:8px;padding:12px 16px}
+summary{cursor:pointer;font:600 16px system-ui,sans-serif}
+details p,details ul{margin:8px 0 0;font-size:15px}
+.chat{background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:12px}
+#log{max-height:360px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;margin-bottom:10px}
+.m{padding:9px 13px;border-radius:14px;font:15px/1.5 system-ui,sans-serif;white-space:pre-wrap;max-width:92%}
+.m.u{align-self:flex-end;background:var(--g);color:var(--bg)}
+.m.a{align-self:flex-start;background:var(--soft)}
+.row{display:flex;gap:8px}
+.row input{flex:1;min-width:0;padding:11px 14px;border-radius:99px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:16px system-ui,sans-serif}
+.row button{background:var(--g);color:var(--bg);border:0;border-radius:99px;padding:0 20px;font:600 15px system-ui,sans-serif;cursor:pointer}
+.row button:disabled{opacity:.5}
+.vis{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:10px;margin-bottom:16px}
+.vis div{background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:14px 10px;text-align:center;font:600 14px/1.35 system-ui,sans-serif}
+.vis i{display:block;font-size:42px;font-style:normal;line-height:1.2;margin-bottom:6px}
+.vis .ok{border-color:var(--g)}.vis .no{border-color:var(--r)}
+.vis small{display:block;font-weight:400;color:var(--mute);margin-top:3px}
+.gm{color:var(--g);font:600 14px system-ui,sans-serif}
+.lbl{font:11px system-ui,sans-serif;fill:var(--mute)}
+footer{text-align:center;color:var(--mute);padding:40px 18px;font-size:14px}
+</style>
+</head>
+<body>
+<nav><a href="#start">Quick facts</a><a href="#history">History</a><a href="#map">Map</a><a href="#places">Places</a><a href="#ask">Ask AI</a><a href="#safety">Stay safe</a><a href="#culture">Culture</a><a href="#tips">Travel tips</a></nav>
+
+<header class="hero">
+<h1>Know About Bangladesh</h1>
+<p>Your friendly guide to the history, places, people and everyday know-how of Bangladesh. Built for newcomers, travellers and the curious.</p>
+<a class="btn" href="#places">Start exploring</a>
+</header>
+
+<section id="start">
+<h2>Bangladesh at a glance</h2>
+<p class="sub">A green, river-woven country of about 170 million people.</p>
+<div class="facts">
+<div class="fact"><b>Capital</b>Dhaka</div>
+<div class="fact"><b>Language</b>Bangla (English widely used in cities)</div>
+<div class="fact"><b>Currency</b>Taka (BDT, ৳)</div>
+<div class="fact"><b>Independence</b>16 Dec 1971</div>
+<div class="fact"><b>Time zone</b>UTC+6</div>
+<div class="fact"><b>Best season</b>November to February</div>
+<div class="fact"><b>Divisions</b>8</div>
+<div class="fact"><b>Famous for</b>Royal Bengal tiger, tea, jute, rivers</div>
+</div>
+</section>
+
+<section id="history">
+<h2>A short history</h2>
+<p class="sub">From ancient kingdoms to a young, resilient nation.</p>
+<div class="tl">
+<div><b>Ancient era</b><br>Bengal was home to kingdoms such as Pundravardhana and Gauda, and later the Buddhist Pala Empire, which built great monasteries like Paharpur.</div>
+<div><b>1204–1757</b><br>Muslim sultanates and the Mughals ruled Bengal, one of the richest regions in the world. Dhaka became a grand Mughal provincial capital.</div>
+<div><b>1757–1947</b><br>British colonial rule began after the Battle of Plassey. The Bengal famine of 1943 and Partition in 1947 reshaped the region.</div>
+<div><b>1947–1971</b><br>As East Pakistan, Bengalis faced political and cultural neglect. The Language Movement of 21 February 1952 became a symbol of identity, and is now International Mother Language Day.</div>
+<div><b>1971</b><br>Led by Sheikh Mujibur Rahman’s call for rights, the Liberation War began in March 1971 and ended with victory on 16 December 1971.</div>
+<div><b>Today</b><br>Bangladesh is a fast-growing economy, a global leader in ready-made garments, and known for microfinance and community resilience to climate challenges.</div>
+</div>
+</section>
+
+<section id="map">
+<h2>Interactive map</h2>
+<p class="sub">Outline and places are plotted from real latitude and longitude, simplified for the screen. Tap a dot to learn about the place. <a class="gm" target="_blank" rel="noopener" href="https://www.google.com/maps/place/Bangladesh">Open all of Bangladesh in Google Maps ↗</a></p>
+<div class="map">
+<svg viewBox="0 0 300 400" id="svg" role="img" aria-label="Simplified map of Bangladesh">
+<path class="land" id="land"/>
+</svg>
+<div class="info" id="info"><h3>Tap a dot</h3><p>Choose a place on the map to see what makes it special.</p></div>
+</div>
+</section>
+
+<section id="places">
+<h2>Best places to visit</h2>
+<p class="sub">Filter by the kind of trip you like.</p>
+<div class="chips" id="chips"></div>
+<div class="grid" id="grid"></div>
+</section>
+
+<section id="ask">
+<h2>Ask the AI guide</h2>
+<p class="sub">Lost, sick, scammed, or just confused? Ask anything. The guide answers from general knowledge and has no live data, so for real-time news, weather or strikes it will point you to the right source. In an emergency, call 999.</p>
+<div class="chat">
+<div id="log"><div class="m a">Hello! I’m your Bangladesh guide. Ask me about safety, transport, visas, food, health, money or what to do in a tricky situation.</div></div>
+<div class="chips" id="qs"></div>
+<div class="row"><input id="q" type="text" placeholder="Type your question…" aria-label="Your question"><button id="send">Send</button></div>
+</div>
+</section>
+
+<section id="safety">
+<h2>Staying safe</h2>
+<p class="sub">Bangladesh is welcoming, and most visitors are treated with great kindness. A little awareness goes a long way.</p>
+<div class="vis">
+<div class="ok"><i>📞</i>Call 999<small>Police, fire, ambulance</small></div>
+<div class="ok"><i>💧</i>Drink sealed water<small>Never tap water</small></div>
+<div class="ok"><i>🛵</i>Use ride apps<small>Fixed fares in Dhaka</small></div>
+<div class="ok"><i>🧕</i>Dress modestly<small>Cover shoulders and knees</small></div>
+<div class="no"><i>🌙</i>Avoid night walks<small>In unfamiliar areas</small></div>
+<div class="no"><i>📢</i>Avoid protests<small>They can turn unpredictable</small></div>
+<div class="no"><i>👛</i>Guard your phone<small>Busy markets and buses</small></div>
+<div class="ok"><i>🌧️</i>Check weather<small>Monsoon and cyclone season</small></div>
+<div class="ok"><i>👞</i>Shoes off<small>Mosques, temples, homes</small></div>
+<div class="ok"><i>👋</i>Greet politely<small>Right hand to give and eat</small></div>
+</div>
+<div class="alert"><b>Emergency numbers:</b> 999 (police, fire, ambulance) · 109 (women and children helpline) · 16263 (health helpline). Always confirm numbers locally as they can change.</div>
+<details open><summary>Everyday safety</summary><ul><li>Keep your phone and wallet in front pockets in crowded places.</li><li>Use ride apps (Uber, Pathao) in Dhaka for fixed prices, or agree a fare before you start.</li><li>Avoid walking alone late at night in unfamiliar areas.</li><li>Keep copies of your passport and visa, and register your SIM with your passport.</li></ul></details>
+<details><summary>Food and water</summary><ul><li>Drink only sealed bottled or filtered water.</li><li>Choose busy, freshly cooked street food stalls.</li><li>Carry oral rehydration salts and basic medicines.</li><li>Be careful with raw salads and ice in small places.</li></ul></details>
+<details><summary>Traffic and roads</summary><ul><li>Traffic is intense. Cross roads slowly and steadily, and walk with locals.</li><li>Intercity buses can be risky at night. Prefer reputed coach services or trains.</li><li>Allow extra time as jams are common in Dhaka.</li></ul></details>
+<details><summary>Weather and nature</summary><ul><li>The monsoon (June–September) brings heavy rain and floods.</li><li>Cyclone season peaks in April–May and October–November. Follow local warnings, especially on the coast.</li><li>For the Sundarbans and hill areas, go with licensed guides.</li></ul></details>
+<details><summary>Scams and common awareness</summary><ul><li>Ask prices first in markets, and bargain politely.</li><li>Be wary of overly friendly strangers offering tours or exchange deals. Use banks or licensed exchange counters.</li><li>Avoid political rallies and protests, as they can turn unpredictable.</li><li>Check your government’s latest travel advisory before you go.</li></ul></details>
+</section>
+
+<section id="culture">
+<h2>Culture and etiquette</h2>
+<p class="sub">Small gestures that earn big smiles.</p>
+<div class="grid">
+<div class="card"><h3>Greetings</h3><p>Say “Assalamu alaikum” to Muslims, “Nomoshkar” to Hindus, or a simple “Hello”. Use your right hand to give, receive and eat.</p></div>
+<div class="card"><h3>Dress</h3><p>Dress modestly, with shoulders and knees covered. Women may carry a light scarf for mosques and rural areas.</p></div>
+<div class="card"><h3>Religious sites</h3><p>Remove shoes before entering mosques, temples and homes. Ask before photographing people, especially women.</p></div>
+<div class="card"><h3>Food</h3><p>Try hilsa fish, kacchi biryani, bhorta, pithas, panta bhat and sweet mishti doi. Rice and fish are the heart of Bengali meals.</p></div>
+<div class="card"><h3>Festivals</h3><p>Pohela Boishakh (14 April), Eid, Durga Puja, Ekushey February, Victory Day and Independence Day (26 March).</p></div>
+<div class="card"><h3>Hospitality</h3><p>You may be invited for tea or a meal. Accepting a cup of tea is a warm way to make friends.</p></div>
+</div>
+</section>
+
+<section id="tips">
+<h2>Practical tips for newcomers</h2>
+<p class="sub">Before you land and while you’re here.</p>
+<details open><summary>Visa and entry</summary><p>Most foreigners need a visa. Check the official Bangladesh e-visa or embassy website for current rules and fees before travelling.</p></details>
+<details><summary>Money</summary><p>Cash is widely used. ATMs are common in cities. Mobile wallets like bKash and Nagad are popular among locals. Carry small notes for rickshaws and tea stalls.</p></details>
+<details><summary>Getting around</summary><ul><li>Rickshaws for short trips, CNG auto-rickshaws for medium trips.</li><li>Dhaka Metro Rail (MRT Line 6) is fast and avoids traffic.</li><li>Trains (Bangladesh Railway) are scenic and comfortable between major cities.</li><li>Launches (river ferries) are a classic way to reach the south, such as Dhaka to Barisal.</li></ul></details>
+<details><summary>Internet, SIM and power</summary><p>Grameenphone, Robi and Banglalink offer SIMs with registration. Power is 220V, with plug types C, D, G and K, and short outages can happen.</p></details>
+<details><summary>Useful Bangla words</summary><ul><li>Dhonnobad: Thank you</li><li>Kemon achhen?: How are you?</li><li>Koto taka?: How much?</li><li>Ami bujhi na: I don’t understand</li><li>Sahajjo korben?: Can you help me?</li></ul></details>
+</section>
+
+<footer>Made with love for Bangladesh, the land of rivers, green fields and warm hearts.<br>Details such as prices, rules and numbers can change, so verify them before travel.</footer>
+
+<script>
+var P=[
+{n:"Dhaka",t:"City",x:150,y:190,d:"The vibrant capital. Visit Lalbagh Fort, Ahsan Manzil, Old Dhaka’s Shakhari Bazar, the National Museum and Liberation War Museum."},
+{n:"Cox’s Bazar",t:"Beach",x:250,y:350,d:"The world’s longest natural sea beach (about 120 km). Enjoy sunsets, seafood and surfing, plus nearby Himchhari and Inani."},
+{n:"Sundarbans",t:"Nature",x:80,y:320,d:"The world’s largest mangrove forest and home of the Royal Bengal tiger. A UNESCO World Heritage Site, best visited with a licensed tour."},
+{n:"Sylhet",t:"Nature",x:230,y:100,d:"Hills, tea gardens and shrines. See Ratargul swamp forest, Jaflong, Lalakhal blue water and Bisnakandi."},
+{n:"Sreemangal",t:"Nature",x:215,y:128,d:"The tea capital of Bangladesh, with endless green tea estates, Lawachara National Park and seven-colour tea."},
+{n:"Bandarban",t:"Hills",x:265,y:318,d:"Home to mountains and indigenous communities. Visit Nilgiri, Nafakhum waterfall, Boga Lake and Keokradong."},
+{n:"Rangamati",t:"Hills",x:250,y:285,d:"The lake city of Kaptai Lake, hanging bridge, boat rides and Chakma and Marma culture."},
+{n:"Paharpur",t:"History",x:80,y:85,d:"Somapura Mahavihara, a UNESCO-listed ancient Buddhist monastery from the 8th century."},
+{n:"Bagerhat",t:"History",x:100,y:285,d:"Sixty Dome Mosque and other 15th-century monuments, a UNESCO World Heritage Site."},
+{n:"Kuakata",t:"Beach",x:150,y:350,d:"One of the few places to see both sunrise and sunset over the sea, with calm shores and Rakhine culture."},
+{n:"Saint Martin’s",t:"Beach",x:272,y:398,d:"The only coral island of Bangladesh. Peaceful, with clear water, best between November and February."},
+{n:"Chattogram",t:"City",x:235,y:272,d:"The port city of hills and sea. Visit Patenga Beach, Foy’s Lake, war cemetery and Batali Hill."}
+];
+var B=[[88.10,26.55],[88.45,26.47],[88.70,26.30],[89.05,26.25],[89.70,26.00],[89.85,25.75],[89.85,25.40],[90.10,25.20],[90.60,25.15],[91.00,25.15],[91.50,25.15],[91.95,25.20],[92.05,25.05],[92.00,24.85],[92.15,24.50],[92.10,24.20],[91.85,24.10],[91.50,24.08],[91.20,23.95],[91.15,23.60],[91.35,23.10],[91.60,22.98],[91.80,23.20],[91.85,23.50],[92.00,23.70],[92.30,23.30],[92.40,22.90],[92.60,22.30],[92.60,21.90],[92.25,21.40],[92.30,21.15],[92.35,20.75],[92.30,20.60],[92.05,21.10],[91.95,21.45],[91.85,22.00],[91.80,22.30],[91.50,22.75],[91.10,22.60],[90.90,22.50],[90.75,22.10],[90.80,21.90],[90.30,21.80],[89.90,21.80],[89.50,21.80],[89.20,21.60],[89.05,21.65],[89.10,22.10],[88.95,22.40],[88.85,22.90],[88.70,23.20],[88.65,23.50],[88.40,23.95],[88.15,24.45],[88.05,24.70],[88.10,25.00],[88.45,25.25],[88.45,25.50],[88.15,25.80],[88.20,26.10],[88.35,26.25]];
+function pr(lo,la){return[+(18+(lo-88)*55).toFixed(1),+(12+(26.65-la)*60).toFixed(1)]}
+document.getElementById("land").setAttribute("d","M"+B.map(function(b){return pr(b[0],b[1]).join(" ")}).join(" L")+"Z");
+var LL={"Dhaka":[90.41,23.81],"Cox’s Bazar":[91.98,21.43],"Sundarbans":[89.5,22.0],"Sylhet":[91.87,24.9],"Sreemangal":[91.73,24.31],"Bandarban":[92.22,22.2],"Rangamati":[92.17,22.65],"Paharpur":[88.97,25.03],"Bagerhat":[89.78,22.66],"Kuakata":[90.12,21.82],"Saint Martin’s":[92.32,20.63],"Chattogram":[91.83,22.35]};
+P.forEach(function(p){var c=pr(LL[p.n][0],LL[p.n][1]);p.x=c[0];p.y=c[1]});
+[["INDIA",60,170],["INDIA",150,25],["MYANMAR",268,330],["Bay of Bengal",120,385]].forEach(function(l){var t=document.createElementNS("http://www.w3.org/2000/svg","text");t.setAttribute("x",l[1]);t.setAttribute("y",l[2]);t.setAttribute("class","lbl");t.setAttribute("text-anchor","middle");t.textContent=l[0];var s0=document.getElementById("svg");s0.insertBefore(t,s0.firstChild)});
+var cats=["All","City","Beach","Nature","Hills","History"],cur="All";
+var chips=document.getElementById("chips"),grid=document.getElementById("grid"),info=document.getElementById("info"),svg=document.getElementById("svg");
+function show(i){info.innerHTML="<h3></h3><span class='tag'></span><p></p><p><a class='gm' target='_blank' rel='noopener'>Open in Google Maps ↗</a></p>";info.querySelector("a").href="https://www.google.com/maps/search/?api=1&query="+LL[P[i].n][1]+","+LL[P[i].n][0];info.querySelector("h3").textContent=P[i].n;info.querySelector(".tag").textContent=P[i].t;info.querySelector("p").textContent=P[i].d;
+svg.querySelectorAll(".dot").forEach(function(c,k){c.classList.toggle("on",k===i)})}
+P.forEach(function(p,i){var c=document.createElementNS("http://www.w3.org/2000/svg","circle");c.setAttribute("cx",p.x);c.setAttribute("cy",p.y);c.setAttribute("r",7);c.setAttribute("class","dot");c.addEventListener("click",function(){show(i)});svg.appendChild(c)});
+function draw(){grid.innerHTML="";P.forEach(function(p,i){if(cur!=="All"&&p.t!==cur)return;var d=document.createElement("div");d.className="card";d.innerHTML="<span class='tag'></span><h3></h3><p></p>";d.querySelector(".tag").textContent=p.t;d.querySelector("h3").textContent=p.n;d.querySelector("p").textContent=p.d;d.style.cursor="pointer";d.onclick=function(){show(i);document.getElementById("map").scrollIntoView()};grid.appendChild(d)});
+chips.querySelectorAll("button").forEach(function(b){b.classList.toggle("on",b.textContent===cur)})}
+cats.forEach(function(c){var b=document.createElement("button");b.textContent=c;b.onclick=function(){cur=c;draw()};chips.appendChild(b)});
+draw();
+var log=document.getElementById("log"),qi=document.getElementById("q"),sb=document.getElementById("send"),hist=[];
+var SYS="You are the Bangladesh Guide, a friendly assistant on a website for newcomers and tourists in Bangladesh. Help with practical questions and problems: safety, transport, visas, health, money, scams, culture, food, places, weather seasons and what to do in tricky situations. Be concise (under 150 words), use short bullet points when helpful, and be honest about uncertainty. You have NO live data (no real-time news, weather, prices, traffic or strikes), so for those say what official source or local contact to check. If it sounds like an emergency, tell them to call 999 first. Never invent phone numbers or prices.";
+["I lost my passport","Is Dhaka safe at night?","How do I get from Dhaka to Cox’s Bazar?","I have stomach trouble, what now?"].forEach(function(s){var b=document.createElement("button");b.textContent=s;b.onclick=function(){qi.value=s;go()};document.getElementById("qs").appendChild(b)});
+function add(c,t){var d=document.createElement("div");d.className="m "+c;d.textContent=t;log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
+async function go(){var q=qi.value.trim();if(!q||sb.disabled)return;qi.value="";add("u",q);hist.push({role:"user",content:q});sb.disabled=true;var out=add("a","Thinking…");
+try{var sample=await claude.use("sample");if(!sample){out.textContent="The AI guide is not available in this view. Please check the safety and tips sections above, and call 999 in an emergency.";hist.pop();return}
+var msgs=hist.slice(-8).map(function(m){return{role:m.role,content:m.content}});msgs[0]={role:"user",content:SYS+"\n\nConversation so far follows. Answer the last user message.\n\n"+msgs[0].content};
+var r=await sample(msgs,{cache:false,onText:function(e){out.textContent=e.text;log.scrollTop=log.scrollHeight}});out.textContent=r.text;hist.push({role:"assistant",content:r.text})}
+catch(e){hist.pop();out.textContent=e&&e.code==="rate_limited"?"Too many questions at once. Please wait a moment and try again.":"Sorry, I couldn’t answer just now. Please try again, or call 999 in an emergency."}
+finally{sb.disabled=false}}
+sb.onclick=go;qi.addEventListener("keydown",function(e){if(e.key==="Enter")go()});
+</script>
+</body>
+</html>
